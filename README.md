@@ -12,7 +12,7 @@ On June 12, 2012, Gizmodo wrote an [article](http://gizmodo.com/5917967/you-wont
 
 You can see a YouTube video of the feature [here](http://www.youtube.com/watch?v=c9X7D87uJ7Q).
 
-The change was criticized by some as a waste of resources and developer time. This project is a demonstration of how quickly the feature can be replicated, and how (relatively) CPU-light it is. Ultimately, this feature uses 10% of the CPU. Compare that to simply sliding a UISlider at 6%.
+The change was criticized by some as a waste of resources and developer time. This project is a demonstration of how quickly the feature can be replicated, and how (relatively) CPU-light it is. Ultimately, this feature uses between 10% and 20% of the CPU. Compare that to simply sliding a UISlider at about half that amount. Note that this usage is only relative to the CPU allocated to the app. Play music in the background and the CPU usage will remain constant.
 
 ## Installation
 

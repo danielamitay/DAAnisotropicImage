@@ -45,10 +45,11 @@
 - (void)updateCPULabel
 {
     // CPU information to demonstrate how much CPU DAAnisotropicImage uses
+    // Note that this is only app-wide CPU usage, not system-wide
     // DAAnisotropicImage uses about the same amount as moving two UISliders from side to side
     // In other words, it is pretty reasonable
     float cpuUsage = [[NSProcessInfo processInfo] cpuUsage];
-    _cpuLabel.text = [NSString stringWithFormat:@"CPU Usage: %.1f%%", (cpuUsage*100.0f)];
+    _cpuLabel.text = [NSString stringWithFormat:@"Allocated CPU Usage: %.1f%%", (cpuUsage*100.0f)];
 }
 
 - (void)viewDidLoad
