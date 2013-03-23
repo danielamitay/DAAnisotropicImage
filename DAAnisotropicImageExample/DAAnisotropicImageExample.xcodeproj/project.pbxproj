@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		639568EB16FD80A0005DE220 /* DAAnisotropicImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 639568E516FD80A0005DE220 /* DAAnisotropicImage.m */; };
+		639568EC16FD80A0005DE220 /* base@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639568E716FD80A0005DE220 /* base@2x.png */; };
+		639568ED16FD80A0005DE220 /* dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639568E816FD80A0005DE220 /* dark@2x.png */; };
+		639568EE16FD80A0005DE220 /* left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639568E916FD80A0005DE220 /* left@2x.png */; };
+		639568EF16FD80A0005DE220 /* right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639568EA16FD80A0005DE220 /* right@2x.png */; };
 		639A2328159A8A23006EFA3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639A2327159A8A23006EFA3C /* UIKit.framework */; };
 		639A232A159A8A23006EFA3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639A2329159A8A23006EFA3C /* Foundation.framework */; };
 		639A232C159A8A23006EFA3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639A232B159A8A23006EFA3C /* CoreGraphics.framework */; };
@@ -14,11 +19,6 @@
 		639A2334159A8A23006EFA3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639A2333159A8A23006EFA3C /* main.m */; };
 		639A2338159A8A23006EFA3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639A2337159A8A23006EFA3C /* AppDelegate.m */; };
 		639A233B159A8A23006EFA3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639A233A159A8A23006EFA3C /* ViewController.m */; };
-		639A234C159A8A48006EFA3C /* DAAnisotropicImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 639A2346159A8A48006EFA3C /* DAAnisotropicImage.m */; };
-		639A234D159A8A48006EFA3C /* base@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639A2348159A8A48006EFA3C /* base@2x.png */; };
-		639A234E159A8A48006EFA3C /* dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639A2349159A8A48006EFA3C /* dark@2x.png */; };
-		639A234F159A8A48006EFA3C /* left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639A234A159A8A48006EFA3C /* left@2x.png */; };
-		639A2350159A8A48006EFA3C /* right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639A234B159A8A48006EFA3C /* right@2x.png */; };
 		639A2352159A8A60006EFA3C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639A2351159A8A60006EFA3C /* CoreMotion.framework */; };
 		639A2355159A8DE2006EFA3C /* slider-fill@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639A2353159A8DE2006EFA3C /* slider-fill@2x.png */; };
 		639A2356159A8DE2006EFA3C /* slider-track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639A2354159A8DE2006EFA3C /* slider-track@2x.png */; };
@@ -26,6 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		639568E416FD80A0005DE220 /* DAAnisotropicImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAnisotropicImage.h; sourceTree = "<group>"; };
+		639568E516FD80A0005DE220 /* DAAnisotropicImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAnisotropicImage.m; sourceTree = "<group>"; };
+		639568E716FD80A0005DE220 /* base@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "base@2x.png"; sourceTree = "<group>"; };
+		639568E816FD80A0005DE220 /* dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark@2x.png"; sourceTree = "<group>"; };
+		639568E916FD80A0005DE220 /* left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left@2x.png"; sourceTree = "<group>"; };
+		639568EA16FD80A0005DE220 /* right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right@2x.png"; sourceTree = "<group>"; };
 		639A2323159A8A23006EFA3C /* DAAnisotropicImageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DAAnisotropicImageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639A2327159A8A23006EFA3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		639A2329159A8A23006EFA3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -38,12 +44,6 @@
 		639A2337159A8A23006EFA3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		639A2339159A8A23006EFA3C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		639A233A159A8A23006EFA3C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		639A2345159A8A48006EFA3C /* DAAnisotropicImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAnisotropicImage.h; sourceTree = "<group>"; };
-		639A2346159A8A48006EFA3C /* DAAnisotropicImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAnisotropicImage.m; sourceTree = "<group>"; };
-		639A2348159A8A48006EFA3C /* base@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "base@2x.png"; sourceTree = "<group>"; };
-		639A2349159A8A48006EFA3C /* dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark@2x.png"; sourceTree = "<group>"; };
-		639A234A159A8A48006EFA3C /* left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left@2x.png"; sourceTree = "<group>"; };
-		639A234B159A8A48006EFA3C /* right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right@2x.png"; sourceTree = "<group>"; };
 		639A2351159A8A60006EFA3C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		639A2353159A8DE2006EFA3C /* slider-fill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-fill@2x.png"; sourceTree = "<group>"; };
 		639A2354159A8DE2006EFA3C /* slider-track@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-track@2x.png"; sourceTree = "<group>"; };
@@ -66,6 +66,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		639568E316FD80A0005DE220 /* DAAnisotropicImage */ = {
+			isa = PBXGroup;
+			children = (
+				639568E416FD80A0005DE220 /* DAAnisotropicImage.h */,
+				639568E516FD80A0005DE220 /* DAAnisotropicImage.m */,
+				639568E616FD80A0005DE220 /* Textures */,
+			);
+			name = DAAnisotropicImage;
+			path = ../../DAAnisotropicImage;
+			sourceTree = "<group>";
+		};
+		639568E616FD80A0005DE220 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				639568E716FD80A0005DE220 /* base@2x.png */,
+				639568E816FD80A0005DE220 /* dark@2x.png */,
+				639568E916FD80A0005DE220 /* left@2x.png */,
+				639568EA16FD80A0005DE220 /* right@2x.png */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
 		639A2318159A8A23006EFA3C = {
 			isa = PBXGroup;
 			children = (
@@ -97,7 +119,7 @@
 		639A232D159A8A23006EFA3C /* DAAnisotropicImageExample */ = {
 			isa = PBXGroup;
 			children = (
-				639A2344159A8A48006EFA3C /* DAAnisotropicImage */,
+				639568E316FD80A0005DE220 /* DAAnisotropicImage */,
 				639A2336159A8A23006EFA3C /* AppDelegate.h */,
 				639A2337159A8A23006EFA3C /* AppDelegate.m */,
 				639A2339159A8A23006EFA3C /* ViewController.h */,
@@ -120,27 +142,6 @@
 				639A2335159A8A23006EFA3C /* DAAnisotropicImageExample-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		639A2344159A8A48006EFA3C /* DAAnisotropicImage */ = {
-			isa = PBXGroup;
-			children = (
-				639A2345159A8A48006EFA3C /* DAAnisotropicImage.h */,
-				639A2346159A8A48006EFA3C /* DAAnisotropicImage.m */,
-				639A2347159A8A48006EFA3C /* Textures */,
-			);
-			path = DAAnisotropicImage;
-			sourceTree = "<group>";
-		};
-		639A2347159A8A48006EFA3C /* Textures */ = {
-			isa = PBXGroup;
-			children = (
-				639A2348159A8A48006EFA3C /* base@2x.png */,
-				639A2349159A8A48006EFA3C /* dark@2x.png */,
-				639A234A159A8A48006EFA3C /* left@2x.png */,
-				639A234B159A8A48006EFA3C /* right@2x.png */,
-			);
-			path = Textures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,12 +196,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				639A2332159A8A23006EFA3C /* InfoPlist.strings in Resources */,
-				639A234D159A8A48006EFA3C /* base@2x.png in Resources */,
-				639A234E159A8A48006EFA3C /* dark@2x.png in Resources */,
-				639A234F159A8A48006EFA3C /* left@2x.png in Resources */,
-				639A2350159A8A48006EFA3C /* right@2x.png in Resources */,
 				639A2355159A8DE2006EFA3C /* slider-fill@2x.png in Resources */,
 				639A2356159A8DE2006EFA3C /* slider-track@2x.png in Resources */,
+				639568EC16FD80A0005DE220 /* base@2x.png in Resources */,
+				639568ED16FD80A0005DE220 /* dark@2x.png in Resources */,
+				639568EE16FD80A0005DE220 /* left@2x.png in Resources */,
+				639568EF16FD80A0005DE220 /* right@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,8 +215,8 @@
 				639A2334159A8A23006EFA3C /* main.m in Sources */,
 				639A2338159A8A23006EFA3C /* AppDelegate.m in Sources */,
 				639A233B159A8A23006EFA3C /* ViewController.m in Sources */,
-				639A234C159A8A48006EFA3C /* DAAnisotropicImage.m in Sources */,
 				639A235D159A916C006EFA3C /* NSProcessInfo+CPU.m in Sources */,
+				639568EB16FD80A0005DE220 /* DAAnisotropicImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +320,7 @@
 				639A2343159A8A23006EFA3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

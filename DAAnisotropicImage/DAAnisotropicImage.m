@@ -27,7 +27,7 @@ static double rightImageRotation = 0.0;
 	if(self == [DAAnisotropicImage class])
 	{
         motionManager = [[CMMotionManager alloc] init];
-        motionManager.accelerometerUpdateInterval = 0.025f;
+        motionManager.accelerometerUpdateInterval = 0.05f;
         accelerometerQueue = [[NSOperationQueue alloc] init];
         
         // These images will be accessed and drawn many times per second.
@@ -57,39 +57,44 @@ static double rightImageRotation = 0.0;
     [motionManager stopAccelerometerUpdates];
 }
 
++ (BOOL)anisotropicUpdatesActive
+{
+    return motionManager.accelerometerActive;
+}
+
 + (UIImage *)imageFromAccelerometerData:(CMAccelerometerData *)data
 {
     CMAcceleration acceleration = [data acceleration];
-    
     CGSize imageSize = base.size;
     CGPoint drawPoint = CGPointMake(-imageSize.width/2.0f,
                                     -imageSize.height/2.0f);
     
     if (UIGraphicsBeginImageContextWithOptions != NULL)
-    {
         UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.0);
-    }
     else
-    {
         UIGraphicsBeginImageContext(imageSize);
-    }
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     
+    [base drawAtPoint:CGPointZero];
     CGContextTranslateCTM(context,
                           imageSize.width/2.0f,
                           imageSize.height/2.0f);
-    [base drawAtPoint:drawPoint];
     
-    darkImageRotation = (darkImageRotation * 0.7f) + (acceleration.x) * 0.3f;
+    // The following numbers are made up
+    // They look OK, but there is definitely improvement to be made
+    
+    double accelToRot = M_PI/2.0f;
+    
+    darkImageRotation = (darkImageRotation * 0.6f) + (acceleration.x * accelToRot) * 0.4f;
     CGContextRotateCTM(context, darkImageRotation);
     [dark drawAtPoint:drawPoint];
     
-    leftImageRotation = (leftImageRotation * 0.7f) + (acceleration.y - darkImageRotation) * 0.3f;
+    leftImageRotation = (leftImageRotation * 0.6f) + (acceleration.y * accelToRot - darkImageRotation) * 0.4f;
     CGContextRotateCTM(context, leftImageRotation);
     [left drawAtPoint:drawPoint];
     
-    rightImageRotation = (rightImageRotation * 0.7f) + (acceleration.z - leftImageRotation) * 0.3f;
+    rightImageRotation = (rightImageRotation * 0.6f) + (acceleration.z * accelToRot - leftImageRotation) * 0.4f;
     CGContextRotateCTM(context, rightImageRotation);
     [right drawAtPoint:drawPoint];
     

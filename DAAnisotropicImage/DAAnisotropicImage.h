@@ -15,6 +15,7 @@ typedef void (^DAAnisotropicBlock)(UIImage *image);
 
 + (void)startAnisotropicUpdatesWithHandler:(DAAnisotropicBlock)block;
 + (void)stopAnisotropicUpdates;
++ (BOOL)anisotropicUpdatesActive;
 
 + (UIImage *)imageFromAccelerometerData:(CMAccelerometerData *)data;
 
