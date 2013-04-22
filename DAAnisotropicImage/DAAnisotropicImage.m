@@ -34,10 +34,10 @@ static double rightImageRotation = 0.0;
         // It is wise to allocate and retain them here to minimize future lag.
         // The difference is imperceptible, yet exists.
         
-		base = [UIImage imageNamed:@"base"];
-        dark = [UIImage imageNamed:@"dark"];
-        left = [UIImage imageNamed:@"left"];
-        right = [UIImage imageNamed:@"right"];
+        base = [UIImage imageNamed:@"DAAnisotropicImage.bundle/base"];
+        dark = [UIImage imageNamed:@"DAAnisotropicImage.bundle/dark"];
+        left = [UIImage imageNamed:@"DAAnisotropicImage.bundle/left"];
+        right = [UIImage imageNamed:@"DAAnisotropicImage.bundle/right"];
     }
 }
 

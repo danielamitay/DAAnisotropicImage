@@ -8,11 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6317876717248D4000F03E6E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6317876617248D3F00F03E6E /* Default-568h@2x.png */; };
+		631787691725EC1400F03E6E /* DAAnisotropicImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 631787681725EC1400F03E6E /* DAAnisotropicImage.bundle */; };
 		639568EB16FD80A0005DE220 /* DAAnisotropicImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 639568E516FD80A0005DE220 /* DAAnisotropicImage.m */; };
-		639568EC16FD80A0005DE220 /* base@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639568E716FD80A0005DE220 /* base@2x.png */; };
-		639568ED16FD80A0005DE220 /* dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639568E816FD80A0005DE220 /* dark@2x.png */; };
-		639568EE16FD80A0005DE220 /* left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639568E916FD80A0005DE220 /* left@2x.png */; };
-		639568EF16FD80A0005DE220 /* right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639568EA16FD80A0005DE220 /* right@2x.png */; };
 		639A2328159A8A23006EFA3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639A2327159A8A23006EFA3C /* UIKit.framework */; };
 		639A232A159A8A23006EFA3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639A2329159A8A23006EFA3C /* Foundation.framework */; };
 		639A232C159A8A23006EFA3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639A232B159A8A23006EFA3C /* CoreGraphics.framework */; };
@@ -28,12 +25,9 @@
 
 /* Begin PBXFileReference section */
 		6317876617248D3F00F03E6E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		631787681725EC1400F03E6E /* DAAnisotropicImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DAAnisotropicImage.bundle; sourceTree = "<group>"; };
 		639568E416FD80A0005DE220 /* DAAnisotropicImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAnisotropicImage.h; sourceTree = "<group>"; };
 		639568E516FD80A0005DE220 /* DAAnisotropicImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAnisotropicImage.m; sourceTree = "<group>"; };
-		639568E716FD80A0005DE220 /* base@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "base@2x.png"; sourceTree = "<group>"; };
-		639568E816FD80A0005DE220 /* dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark@2x.png"; sourceTree = "<group>"; };
-		639568E916FD80A0005DE220 /* left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left@2x.png"; sourceTree = "<group>"; };
-		639568EA16FD80A0005DE220 /* right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right@2x.png"; sourceTree = "<group>"; };
 		639A2323159A8A23006EFA3C /* DAAnisotropicImageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DAAnisotropicImageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639A2327159A8A23006EFA3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		639A2329159A8A23006EFA3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -73,21 +67,10 @@
 			children = (
 				639568E416FD80A0005DE220 /* DAAnisotropicImage.h */,
 				639568E516FD80A0005DE220 /* DAAnisotropicImage.m */,
-				639568E616FD80A0005DE220 /* Textures */,
+				631787681725EC1400F03E6E /* DAAnisotropicImage.bundle */,
 			);
 			name = DAAnisotropicImage;
 			path = ../../DAAnisotropicImage;
-			sourceTree = "<group>";
-		};
-		639568E616FD80A0005DE220 /* Textures */ = {
-			isa = PBXGroup;
-			children = (
-				639568E716FD80A0005DE220 /* base@2x.png */,
-				639568E816FD80A0005DE220 /* dark@2x.png */,
-				639568E916FD80A0005DE220 /* left@2x.png */,
-				639568EA16FD80A0005DE220 /* right@2x.png */,
-			);
-			path = Textures;
 			sourceTree = "<group>";
 		};
 		639A2318159A8A23006EFA3C = {
@@ -201,11 +184,8 @@
 				639A2332159A8A23006EFA3C /* InfoPlist.strings in Resources */,
 				639A2355159A8DE2006EFA3C /* slider-fill@2x.png in Resources */,
 				639A2356159A8DE2006EFA3C /* slider-track@2x.png in Resources */,
-				639568EC16FD80A0005DE220 /* base@2x.png in Resources */,
-				639568ED16FD80A0005DE220 /* dark@2x.png in Resources */,
-				639568EE16FD80A0005DE220 /* left@2x.png in Resources */,
-				639568EF16FD80A0005DE220 /* right@2x.png in Resources */,
 				6317876717248D4000F03E6E /* Default-568h@2x.png in Resources */,
+				631787691725EC1400F03E6E /* DAAnisotropicImage.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
