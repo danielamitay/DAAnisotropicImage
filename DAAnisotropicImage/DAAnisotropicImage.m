@@ -84,17 +84,15 @@ static CGFloat rightImageRotation = 0.0f;
     // The following numbers are made up
     // They look OK, but there is definitely improvement to be made
     
-    CGFloat accelToRot = M_PI/2.0f;
-    
-    darkImageRotation = (darkImageRotation * 0.6f) + (acceleration.x * accelToRot) * 0.4f;
+    darkImageRotation = (darkImageRotation * 0.6f) + (acceleration.x * M_PI_2) * 0.4f;
     CGContextRotateCTM(context, darkImageRotation);
     [dark drawAtPoint:drawPoint];
     
-    leftImageRotation = (leftImageRotation * 0.6f) + (acceleration.y * accelToRot - darkImageRotation) * 0.4f;
+    leftImageRotation = (leftImageRotation * 0.6f) + (acceleration.y * M_PI_2 - darkImageRotation) * 0.4f;
     CGContextRotateCTM(context, leftImageRotation);
     [left drawAtPoint:drawPoint];
     
-    rightImageRotation = (rightImageRotation * 0.6f) + (acceleration.z * accelToRot - leftImageRotation) * 0.4f;
+    rightImageRotation = (rightImageRotation * 0.6f) + (acceleration.z * M_PI_2 - leftImageRotation) * 0.4f;
     CGContextRotateCTM(context, rightImageRotation);
     [right drawAtPoint:drawPoint];
     
