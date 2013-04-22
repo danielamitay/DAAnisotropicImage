@@ -18,9 +18,9 @@ static UIImage *dark = nil;
 static UIImage *left = nil;
 static UIImage *right = nil;
 
-static double darkImageRotation = 0.0;
-static double leftImageRotation = 0.0;
-static double rightImageRotation = 0.0;
+static CGFloat darkImageRotation = 0.0f;
+static CGFloat leftImageRotation = 0.0f;
+static CGFloat rightImageRotation = 0.0f;
 
 + (void)initialize
 {
@@ -70,7 +70,7 @@ static double rightImageRotation = 0.0;
                                     -imageSize.height/2.0f);
     
     if (UIGraphicsBeginImageContextWithOptions != NULL)
-        UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.0);
+        UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.0f);
     else
         UIGraphicsBeginImageContext(imageSize);
     
@@ -84,7 +84,7 @@ static double rightImageRotation = 0.0;
     // The following numbers are made up
     // They look OK, but there is definitely improvement to be made
     
-    double accelToRot = M_PI/2.0f;
+    CGFloat accelToRot = M_PI/2.0f;
     
     darkImageRotation = (darkImageRotation * 0.6f) + (acceleration.x * accelToRot) * 0.4f;
     CGContextRotateCTM(context, darkImageRotation);
