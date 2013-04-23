@@ -13,10 +13,10 @@
 static CMMotionManager *motionManager = nil;
 static NSOperationQueue *accelerometerQueue = nil;
 
-static UIImage *base = nil;
-static UIImage *dark = nil;
-static UIImage *left = nil;
-static UIImage *right = nil;
+static UIImage *baseImage = nil;
+static UIImage *darkImage = nil;
+static UIImage *leftImage = nil;
+static UIImage *rightImage = nil;
 
 static CGFloat darkImageRotation = 0.0f;
 static CGFloat leftImageRotation = 0.0f;
@@ -34,20 +34,20 @@ static CGFloat rightImageRotation = 0.0f;
         // It is wise to allocate and retain them here to minimize future lag.
         // The difference is imperceptible, yet exists.
         
-        base = [UIImage imageNamed:@"DAAnisotropicImage.bundle/base"];
-        dark = [UIImage imageNamed:@"DAAnisotropicImage.bundle/dark"];
-        left = [UIImage imageNamed:@"DAAnisotropicImage.bundle/left"];
-        right = [UIImage imageNamed:@"DAAnisotropicImage.bundle/right"];
+        baseImage = [UIImage imageNamed:@"DAAnisotropicImage.bundle/base"];
+        darkImage = [UIImage imageNamed:@"DAAnisotropicImage.bundle/dark"];
+        leftImage = [UIImage imageNamed:@"DAAnisotropicImage.bundle/left"];
+        rightImage = [UIImage imageNamed:@"DAAnisotropicImage.bundle/right"];
     }
 }
 
-+ (void)startAnisotropicUpdatesWithHandler:(DAAnisotropicBlock)block
++ (void)startAnisotropicUpdatesWithHandler:(DAAnisotropicBlock)updateBlock
 {
     [motionManager startAccelerometerUpdatesToQueue:accelerometerQueue 
                                          withHandler:^(CMAccelerometerData *data, NSError *error) {
                                              UIImage *anisotropicImage = [self imageFromAccelerometerData:data];
                                              dispatch_async(dispatch_get_main_queue(), ^{
-                                                 block(anisotropicImage);
+                                                 updateBlock(anisotropicImage);
                                              });
                                          }];
 }
@@ -64,37 +64,37 @@ static CGFloat rightImageRotation = 0.0f;
 
 + (UIImage *)imageFromAccelerometerData:(CMAccelerometerData *)data
 {
-    CGSize imageSize = base.size;
-    CGPoint drawPoint = CGPointMake(-imageSize.width / 2.0f, -imageSize.height / 2.0f);
+    CGSize baseImageSize = baseImage.size;
+    CGPoint drawPoint = CGPointMake(-baseImageSize.width / 2.0f, -baseImageSize.height / 2.0f);
     
     if (UIGraphicsBeginImageContextWithOptions != NULL)
     {
-        UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.0f);
+        UIGraphicsBeginImageContextWithOptions(baseImageSize, NO, 0.0f);
     }
     else
     {
-        UIGraphicsBeginImageContext(imageSize);
+        UIGraphicsBeginImageContext(baseImageSize);
     }
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    [base drawAtPoint:CGPointZero];
-    CGContextTranslateCTM(context, imageSize.width / 2.0f, imageSize.height / 2.0f);
+    [baseImage drawAtPoint:CGPointZero];
+    CGContextTranslateCTM(context, baseImageSize.width / 2.0f, baseImageSize.height / 2.0f);
     
     // The following numbers are made up
     // They look OK, but there is definitely improvement to be made
     
     darkImageRotation = (darkImageRotation * 0.6f) + (data.acceleration.x * M_PI_2) * 0.4f;
     CGContextRotateCTM(context, darkImageRotation);
-    [dark drawAtPoint:drawPoint];
+    [darkImage drawAtPoint:drawPoint];
     
     leftImageRotation = (leftImageRotation * 0.6f) + (data.acceleration.y * M_PI_2 - darkImageRotation) * 0.4f;
     CGContextRotateCTM(context, leftImageRotation);
-    [left drawAtPoint:drawPoint];
+    [leftImage drawAtPoint:drawPoint];
     
     rightImageRotation = (rightImageRotation * 0.6f) + (data.acceleration.z * M_PI_2 - leftImageRotation) * 0.4f;
     CGContextRotateCTM(context, rightImageRotation);
-    [right drawAtPoint:drawPoint];
+    [rightImage drawAtPoint:drawPoint];
     
     UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
