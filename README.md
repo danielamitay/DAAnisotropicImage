@@ -1,6 +1,6 @@
 ## DAAnisotropicImage
 
-DAAnisotropicImage is an anisotropic UIImage generator. Specifically, for a metallic slider knob.
+`DAAnisotropicImage` is an anisotropic `UIImage` generator. Specifically, for a metallic slider knob.
 
 It was built to be an imitation of the volume slider thumb image in Apple's iOS 6.0 Music app.
 
@@ -12,37 +12,36 @@ On June 12, 2012, Gizmodo wrote an [article](http://gizmodo.com/5917967/you-wont
 
 You can see a YouTube video of the feature [here](http://www.youtube.com/watch?v=c9X7D87uJ7Q).
 
-The change was criticized by some as a waste of resources and developer time. This project is a demonstration of how quickly the feature can be replicated, and how (relatively) CPU-light it is. Ultimately, this feature uses between 10% and 20% of the CPU. Compare that to simply sliding a UISlider at about half that amount. Note that this usage is only relative to the CPU allocated to the app. Play music in the background and the CPU usage will remain constant.
+The change was criticized by some as a waste of resources and developer time. This project is a demonstration of how quickly the feature can be replicated, and how (relatively) CPU-light it is. Ultimately, this feature uses between 10% and 20% of the CPU (mainly for drawing). Compare that to simply sliding a `UISlider` at about half that amount. Note that this usage is only relative to the CPU allocated to the app. Play music in the background and the CPU usage will remain constant, for example.
 
 ## Installation
 
-To use DAAnisotropicImage:
+To use `DAAnisotropicImage`:
 
 1 - Copy over the `DAAnisotropicImage` folder (and it's subfolder) to your project folder.
-2 - Make sure that your project includes the CoreMotion.framework.
-3 - Call startAnisotropicUpdatesWithHandler: appropriately.
+2 - Make sure that your project includes the `CoreMotion.framework`.
+3 - Call `-startAnisotropicUpdatesWithHandler:` appropriately.
 
 ## Notes
 
 ### Automatic Reference Counting (ARC) support
-DAAnisotropicImage was made with ARC enabled by default.
+`DAAnisotropicImage` was made with ARC enabled by default.
 
 ## Contact
 
-- [Personal website](http://www.amitay.us)
+- [Personal website](http://danielamitay.com)
 - [GitHub](http://github.com/danielamitay)
 - [Twitter](http://twitter.com/danielamitay)
 - [LinkedIn](http://www.linkedin.com/in/danielamitay)
-- [Hacker News](http://news.ycombinator.com/user?id=danielamitay)
-- [Email](daniel@amitay.us)
+- [Email](mailto:hello@danielamitay.com)
 
-If you use/enjoy DAAnisotropicImage, let me know!
+If you use/enjoy `DAAnisotropicImage`, let me know!
 
 ## License
 
 ### MIT License
 
-Copyright (c) 2012 Daniel Amitay (http://www.amitay.us)
+Copyright (c) 2013 Daniel Amitay (http://www.danielamitay.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
