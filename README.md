@@ -20,9 +20,9 @@ The change was criticized by some as a waste of resources and developer time. Th
 
 To use `DAAnisotropicImage`:
 
-1 - Copy over the `DAAnisotropicImage` folder (and it's subfolder) to your project folder.
-2 - Make sure that your project includes the `CoreMotion.framework`.
-3 - Call `-startAnisotropicUpdatesWithHandler:` appropriately.
+- Copy over the `DAAnisotropicImage` folder (and it's subfolder) to your project folder.
+- Make sure that your project includes the `CoreMotion.framework`.
+- Call `-startAnisotropicUpdatesWithHandler:` appropriately.
 
 ## Notes
 
