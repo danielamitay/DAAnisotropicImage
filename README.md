@@ -6,6 +6,8 @@ It was built to be an imitation of the volume slider thumb image in Apple's iOS 
 
 View the included example project for a demonstration. It also demonstrates the CPU usage.
 
+![Screenshot](https://github.com/danielamitay/DAAnisotropicImage/raw/master/screenshot.png)
+
 ## Discussion
 
 On June 12, 2012, Gizmodo wrote an [article](http://gizmodo.com/5917967/you-wont-believe-how-insane-this-tiny-new-detail-in-ios-6-is) about an overlooked feature in the iOS 6.0 beta: a skeuomorphic metallic slider in the Music app.
